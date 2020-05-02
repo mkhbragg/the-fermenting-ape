@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'AveriaSerif';
+  src: url('../fonts/averia-serif/AveriaSerif-Regular.ttf')  format('truetype');  /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'AveriaSans';
+  src: url('../fonts/averia-sans/AveriaSans-Regular.ttf')  format('truetype');  /* Safari, Android, iOS */
+}
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
