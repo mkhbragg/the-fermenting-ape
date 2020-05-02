@@ -10,9 +10,10 @@ const ProductCard = ({ flavor }) => {
 
   return (
     <Container>
-        <Image filename={`${flavor}-logo.svg`} alt={`chiimpanzee resting chin on fist with thoughtful expression with ${flavor} in background`} />
+        {/* <Image filename={`${flavor}-logo.svg`} alt={`chiimpanzee resting chin on fist with thoughtful expression with ${flavor} in background`} /> */}
+        <h3>{flavor}</h3>
         <Column>
-          <Button grid><GiCardboardBox size='2em' /><span>Add to 6-pack</span></Button>
+          <Button grid><GiCardboardBox size='2em' />Add to 6-pack</Button>
           <Button grid><GiBeerBottle size='2em' />Add to cart</Button>
           <Box>
             <Grid>
@@ -39,7 +40,7 @@ const Container = styled.div({
   display: 'grid',
   gridTemplateColumns: 'auto',
   backgroundColor: `white`,
-  boxShadow: `0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12)`,
+  boxShadow: `0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06)`,
   padding: `2rem`,
 })
 
