@@ -11,7 +11,7 @@ const ProductCard = ({ flavor }) => {
   return (
     <Container>
         {/* <Image filename={`${flavor}-logo.svg`} alt={`chiimpanzee resting chin on fist with thoughtful expression with ${flavor} in background`} /> */}
-        <h3>{flavor}</h3>
+        <h3>{flavor.toUpperCase()}</h3>
         <Column>
           <Button grid><GiCardboardBox size='2em' />Add to 6-pack</Button>
           <Button grid><GiBeerBottle size='2em' />Add to cart</Button>
