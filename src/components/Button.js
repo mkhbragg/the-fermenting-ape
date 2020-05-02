@@ -7,10 +7,11 @@ export const Button = styled.button(props => ({
   cursor: props.disabled ? 'no-drop': 'pointer',
   display: 'grid',
   fontFamily: 'AveriaSans',
-  gridTemplateRows: '2rem',
-  gridTemplateColumns: '2rem 1fr',
+  gridTemplateRows: props.grid ? '2rem' : '',
+  gridTemplateColumns: props.grid ? '2rem 1fr' : '',
   justifyItems: 'center',
   justifyContent: 'center',
+  padding: `0.5rem`,
   ['&:focus']: {
     borderBottom: '4px solid #222',
   },

@@ -7,10 +7,10 @@ import SEO from "../components/seo"
 import Products from "../components/Products"
 
 const IndexPage = () => (
-  <Layout>
+  <Layout style={{backgroundColor: '#EEF2F7'}}>
     <SEO title="Home" />
     <Products />
-    <Image filename='generic-logo.svg' alt='chiimpanzee resting chin on fist with thoughtful expression' style={{marginTop: '-14rem'}} />
+    <Image filename='generic-logo.svg' alt='chiimpanzee resting chin on fist with thoughtful expression' />
   </Layout>
 )
 

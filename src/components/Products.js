@@ -1,16 +1,24 @@
 import React from "react"
+import styled from '@emotion/styled'
+
 import ProductCard from "./Products/ProductCard"
 
 const Products = ({ }) => {
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+    <ProductList>
         <ProductCard flavor='apple' />
         <ProductCard flavor='ginger' />
         <ProductCard flavor='pomegranate' />
         <ProductCard flavor='lavender' />
-    </div>
+    </ProductList>
   )
 }
+
+const ProductList = styled.div({
+  display: `grid`,
+  gridGap: `3rem`,
+  gridTemplateColumns: `repeat(auto-fit, minmax(350px, 1fr))`
+})
 
 export default Products
