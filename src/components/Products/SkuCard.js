@@ -40,8 +40,8 @@ const SkuCard = ({ sku, stripePromise }) => {
     const stripe = await stripePromise
     const { error } = await stripe.redirectToCheckout({
       items: [{ sku, quantity }],
-      successUrl: `${window.location.origin}/page-2/`,
-      cancelUrl: `${window.location.origin}/advanced`,
+      successUrl: `${window.location.origin}/success/`,
+      cancelUrl: `${window.location.origin}/`,
     })
 
     if (error) {
