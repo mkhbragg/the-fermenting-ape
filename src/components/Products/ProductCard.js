@@ -1,6 +1,6 @@
 import React from "react"
 import styled from '@emotion/styled'
-import { GiBeerBottle, GiCardboardBox } from 'react-icons/gi'
+import { Link } from "gatsby"
 
 import Image from "../image"
 import { Button } from "../Button"
@@ -11,8 +11,18 @@ const ProductCard = ({ flavor }) => {
   return (
     <Container>
         {/* <Image filename={`${flavor}-logo.svg`} alt={`chiimpanzee resting chin on fist with thoughtful expression with ${flavor} in background`} /> */}
-        <h3>{flavor.toUpperCase()}</h3>
-        <Column>
+        <Card>
+          <Front>
+            <h3>{flavor.toUpperCase()}</h3>
+            <Image filename={`empty-bottle.png`} alt={`empty glass bottle`} />
+            <Button filled style={{width: '100%'}}>Select</Button>
+            <Button style={{width: '100%'}}>Learn more</Button>
+          </Front>
+          <Back>
+            More information about {flavor}
+          </Back>
+        </Card>
+        {/* <Column>
           <Button grid><GiCardboardBox size='2em' />Add to 6-pack</Button>
           <Button grid><GiBeerBottle size='2em' />Add to cart</Button>
           <Box>
@@ -26,21 +36,36 @@ const ProductCard = ({ flavor }) => {
               <Button>Add to cart</Button>
             </Grid>
           </Box>
-        </Column>
+        </Column> */}
     </Container>
   )
 }
+
+const Back = styled.div({
+  // position: `absolute`,
+  backfaceVisibility: `hidden`,
+  transform: `rotateY(180deg)`,
+})
 
 const Box = styled.div({
   // border: `1px solid rgba(34, 34, 34, 0.2)`,
   padding: `0.75rem`,
 })
 
+const Card = styled.div({
+  position: `relative`,
+})
+
 const Container = styled.div({
+  // position: `relative`,
+  // transformStyle: `preserve-3d`,
+  // transition: `transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275)`,
+  // ['-webkit-box-shadow']: `0 6px 16px rgba(0,0,0,0.15)`,
+  // boxShadow: `0 6px 16px rgba(0,0,0,0.15)`,
+  // border: `1px solid #eee`,
+  // boxShadow: `0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048)`,
   display: 'grid',
   gridTemplateColumns: 'auto',
-  backgroundColor: `white`,
-  boxShadow: `0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06)`,
   padding: `2rem`,
 })
 
@@ -52,6 +77,11 @@ const Column = styled.div({
   rowGap: '1rem',
 })
 
+const Front = styled.div({
+  // position: `absolute`,
+  backfaceVisibility: `hidden`,
+})
+
 const Grid = styled.div({
   display: `grid`,
   gridRowGap: `0.5rem`,
@@ -60,6 +90,10 @@ const Grid = styled.div({
 
 const Label = styled.label({
   fontFamily: 'AveriaSans'
+})
+
+const LinkView = styled(Link)({
+
 })
 
 const Select = styled.select({
