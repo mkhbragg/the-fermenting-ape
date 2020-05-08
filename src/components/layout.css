@@ -22,6 +22,16 @@
   font-weight: 700;
 }
 
+@font-face {
+  font-family: 'OpenmojiBlack';
+  src: url('../fonts/openmoji/OpenMoji-Black.ttf')  format('truetype');  /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'OpenmojiColor';
+  src: url('../fonts/openmoji/OpenMoji-Color.ttf')  format('truetype');  /* Safari, Android, iOS */
+}
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
