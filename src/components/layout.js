@@ -8,10 +8,10 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-
 import { GiHearts } from 'react-icons/gi'
 
 import Header from "./header"
+import Image from "./image"
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -37,6 +37,7 @@ const Layout = ({ children }) => {
       >
         <main>{children}</main>
         <footer>
+          <Image filename='generic-logo.svg' alt='chimpanzee resting chin on fist with a thoughtful expression' />
           Made with <GiHearts /> in Blacksburg, VA
         </footer>
       </div>

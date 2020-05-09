@@ -3,6 +3,8 @@ import PropTypes from "prop-types"
 import React from "react"
 import styled from '@emotion/styled'
 
+import Image from "./image"
+
 const Header = ({ siteTitle }) => (
   <HeaderView>
     <Content>
@@ -18,6 +20,7 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
+      <Image onMouseOver={console.log('hello')} onFocus={console.log('hello')} onMouseOut={console.log('bye')} onBlur={console.log('bye')} filename='openmoji/svg-black/1F412.svg' alt='a monkey walking on all fours with tail waving in the air' />
     </Content>
   </HeaderView>
 )

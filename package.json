@@ -8,6 +8,7 @@
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
     "@stripe/stripe-js": "^1.5.0",
+    "axios": "^0.19.2",
     "gatsby": "^2.21.0",
     "gatsby-image": "^2.4.0",
     "gatsby-plugin-emotion": "^4.3.0",
@@ -20,9 +21,13 @@
     "gatsby-transformer-sharp": "^2.5.0",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
+    "react-albus": "^2.0.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.0.0",
     "react-icons": "^3.10.0",
+    "react-router-dom": "^5.1.2",
+    "react-spring": "^8.0.27",
+    "reakit": "^1.0.0-rc.2",
     "styled-system": "^5.1.5"
   },
   "devDependencies": {

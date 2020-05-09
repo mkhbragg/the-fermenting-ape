@@ -14,7 +14,7 @@ module.exports = {
     {
       resolve: `gatsby-source-stripe`,
       options: {
-        objects: ["Sku"],
+        objects: ["Sku", "Subscription", 'Product', 'Customer'],
         secretKey: process.env.STRIPE_SECRET_KEY,
         downloadFiles: true,
       },
@@ -37,7 +37,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/monkey.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
